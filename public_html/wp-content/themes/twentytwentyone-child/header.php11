@@ -1,0 +1,218 @@
+<?php
+
+/**
+ * The header.
+ *
+ * This is the template that displays all of the <head> section and everything up until main.
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package WordPress
+ * @subpackage Twenty_Twenty_One
+ * @since Twenty Twenty-One 1.0
+ */
+
+?>
+<!doctype html>
+<html <?php language_attributes(); ?> <?php twentytwentyone_the_html_classes(); ?>>
+
+<head>
+	<meta charset="<?php bloginfo('charset'); ?>" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<?php wp_head(); ?>
+</head>
+<?php
+// include 'javascript.js';
+?>
+<link href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../twentytwentyone-child/bootstrap-grid.css">
+<link rel="stylesheet" href="../twentytwentyone-child/style.css">
+<script src="https://code.jquery.com/jquery-2.1.0.js"></script>
+<script src="javascript.js"></script>
+
+
+<body <?php body_class(); ?>>
+	<?php wp_body_open(); ?>
+	<div class="wizard">
+		<div class="row row-bg">
+			<div class="col-2"></div>
+			<div class="col-8">
+				<br>
+
+
+
+
+				<div class="container">
+					<ol class="breadcrumb breadcrumb-arrow">
+						<li><span><i class="fas fa-home"></i></span></li>
+						<li><span class="text_active"> Contact Info</span></li>
+						<li><span>Quantity</span></li>
+						<li><span>Price</span></li>
+						<li><span>Done</span></li>
+					</ol>
+				</div>
+
+			</div>
+			<div class="col-2"></div>
+
+			<div class="page_1">
+				<div class="title">Contact Info</div>
+				<form class="form" action="javascript:void(0)">
+					<div class="sent_info">
+						<div class="name_sent"><label style="padding: 20px;">Name</label><input type="text" name=" " class="ph">
+						</div>
+
+
+
+
+						<div class="form-row">
+							<div class="form-col">
+								<div class="email_sent">Email<sup class="req"> required</sup> <input type="email" name="email " class="ph" required></div>
+
+								<span class="error"></span>
+							</div>
+						</div>
+
+
+
+						<div class="number_phone"><label style="padding: 20px;">Phone</label><input type="text" name=" " class="ph"></div>
+
+
+						<button type="button" class="butt1">Continue</button>
+					</div>
+				</form>
+			</div>
+
+
+			<div class="page_2 hidden">
+				<form class="form">
+
+					<div class="title">Quantity</div>
+
+
+					<div class="form-row">
+						<div class="form-col">
+							<div class="quantity">Quantity<sup class="req"> required</sup>
+								<input id="innnn" type="number" class="ph" required>
+							</div>
+						</div>
+					</div>
+					<button type="button" class="butt2">Continue</button>
+
+					<button type="button" class="butt3"><i class="fas fa-arrow-left"></i> Back</button>
+				</form>
+			</div>
+
+
+
+
+			<div class="page_3 hidden">
+				<form class="form">
+
+					<div class="title">Price</div>
+
+
+					<div class="form-row">
+						<div class="form-col">
+							<div><span class="prc"></span>
+							</div>
+
+						</div>
+					</div>
+					<button type="button" class="butt4">Send to Email</button>
+
+					<button type="button" class="butt5"><i class="fas fa-arrow-left"></i> Back</button>
+				</form>
+			</div>
+
+
+		</div>
+	</div>
+
+
+
+
+
+
+	<script>
+		$(function() {
+			//зникає перша сторінка
+			var sent = $('.butt1').click(function() {
+				$('.page_1').addClass('hidden');
+			});
+			//зявляється друга сторінка
+			var p2 = $('.butt1').click(function() {
+				$('.page_2').removeClass('hidden');
+			});
+
+			//при поверненні назад появляється 1 сторінка
+			var bck = $('.butt3').click(function() {
+
+				$('.page_1').removeClass('hidden');
+			});
+			//при поверенні на 1 сторінку 2 сторінка получає класс хіден
+			var p1 = $('.butt3').click(function() {
+				$('.page_2').addClass('hidden');
+			});
+
+
+			//при переході з 2 на 3 сторінку показується 3 сторінка
+
+			var prc = $('.butt2').click(function() {
+				console.log(x);
+				if (x > 0 && x < 1000) {
+					alert("YES");
+					$('.page_3').removeClass('hidden');
+				} else {
+					alert("NO");
+				};
+
+
+
+			});
+			var p22 = $('.butt2').click(function() {
+				$('.page_3').removeClass('hidden');
+			});
+			//2 сторінці надається класс хіден
+			var p3 = $('.butt2').click(function() {
+				$('.page_2').addClass('hidden');
+			});
+			//при переході з 3 на  сторінці видається клас хідден 3 сторінкці
+			var pp2 = $('.butt5').click(function() {
+				$('.page_3').addClass('hidden');
+			});
+			//забирає класс хіден з 2 сторінки
+			var bck2 = $('.butt5').click(function() {
+				$('.page_2').removeClass('hidden');
+			});
+
+
+		});
+
+		function hiddenAll() {
+			$('.page_2').addClass('hidden');
+			$('.page_3').addClass('hidden');
+			$('.page_1').addClass('hidden');
+		}
+	</script>
+
+
+
+
+
+
+
+	<?php echo add_shortcode('[r_test]"This is description"[/r_test]'); ?>
+
+
+	<div id="page" class="site">
+		<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e('Skip to content', 'twentytwentyone'); ?></a>
+
+		<?php get_template_part('template-parts/header/site-header'); ?>
+
+		<div id="content" class="site-content">
+			<div id="primary" class="content-area">
+				<main id="main" class="site-main" role="main">

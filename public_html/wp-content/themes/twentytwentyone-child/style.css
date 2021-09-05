@@ -1,0 +1,254 @@
+/*
+Theme Name:     Twenty Twenty-One Child Theme
+Theme URI:      https://WordPress.org
+Description:    Дочірня тема для TwentyTwentyOne
+Author:         Twenty Twenty-One
+Author URI:     WordPress.org
+Template:       twentytwentyone
+Version:        1.4.0
+*/
+@import url("../twentytwentyone/style.css");
+
+
+
+html, body {
+	height: 100%; 
+    width: 100%;
+	background-color: #fff;
+}
+.wizard{
+    margin: 0 auto;
+    padding-left: 5px;
+    padding-right: 5px;
+    margin-top: 60px;
+    font-family: 'Inter', sans-serif;
+    
+
+}
+.row-bg{
+    background-color: #dddada;
+}
+
+
+.breadcrumb-arrow {
+    border-radius: 10px; 
+    text-align: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 36px;
+    margin-left:50px;
+    margin-top: 20px;
+    padding: 0;
+    line-height: 36px;
+    list-style: none;
+    background-color: #fff;
+}
+.breadcrumb-arrow li:first-child span {
+    border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+    border-radius: 4px 0 0 4px;
+}
+.breadcrumb-arrow li, .breadcrumb-arrow li span, .breadcrumb-arrow li span {
+    display: inline-block;
+    vertical-align: top;
+}
+.breadcrumb-arrow li:not(:first-child) {
+    margin-left: -5px
+}
+.breadcrumb-arrow li+li:before {
+    padding: 0;
+    content: "";
+}
+.breadcrumb-arrow li span {
+    padding: 0 10px;
+}
+.breadcrumb-arrow li span, .breadcrumb-arrow li:not(:first-child) span {
+    height: 36px;
+    padding: 0 10px 0 25px;
+    line-height: 36px;
+}
+.breadcrumb-arrow li:first-child span {
+    padding: 0 10px;
+}
+.breadcrumb-arrow li span {
+    position: relative;
+    color: #fff;
+    text-decoration: none;
+    background-color: #fff;
+    border: 1px solid #fff;
+}
+.breadcrumb-arrow li:first-child span {
+    padding-left: 10px;
+}
+.breadcrumb-arrow li span:after, .breadcrumb-arrow li span:before {
+    position: absolute;
+    top: -1px;
+    width: 0;
+    height: 0;
+    content: '';
+    border-top: 18px solid transparent;
+    border-bottom: 18px solid transparent;
+}
+.breadcrumb-arrow li span:before {
+    right: -10px;
+    z-index: 3;
+    border-left-color: #fff;
+    border-left-style: solid;
+    border-left-width: 11px;
+}
+.breadcrumb-arrow li span:after {
+    right: -11px;
+    z-index: 2;
+    border-left: 11px solid grey;
+}
+
+.breadcrumb-arrow li span {
+    color: #434a54;
+}
+
+
+
+.text_active{
+    color:cornflowerblue;
+}
+
+.title{
+    margin-top: 20px;
+    margin-left:50px;
+    font-size: 40px;
+    font-weight: 700;
+}
+
+.input{
+     position: relative;
+    margin-top: 25px;
+    font-size:15px;
+    margin-left:70px; 
+    padding-right: 50px;
+}
+
+
+
+.sent_info{
+    margin-left: 30px;
+   
+   
+}
+
+.ph1{
+    margin-left: 42px;
+}
+
+
+.ph{
+    width: 65%;
+    border:  solid #fff;
+    border-radius: 10px;
+    line-height: 1;
+    max-width: 100%
+}
+
+
+.req{
+    font-weight: 300;
+}
+
+
+.butt_main{
+    font-size: 15px;
+    margin-top:25px;
+    padding: 1px 6px;
+    background-color: cornflowerblue;
+    color:#fff;
+    margin-left:50px;
+    margin-bottom: 50px;
+
+}
+
+.butt_m{
+    margin-top: 125px;
+}
+
+.butt_m2{
+    margin-top: 100px;
+}
+.butt_m3{
+    margin-top: 140px;
+}
+
+.quantity{
+    position: relative;
+    margin-top: 25px;
+    font-size:15px;
+    margin-left:70px;
+
+}
+ .text_sent{
+        font-size: 16px;
+        margin-top: 20px;
+        margin-left: 50px;
+    }
+
+.hidden{
+    display: none;
+}
+
+.prc{
+     font-size:36px;
+}
+
+
+    .fab{
+        color: red;
+    }
+@media(max-width:576px){
+
+    .breadcrumb-arrow {
+        justify-content: flex-start;
+        width: 85%;
+        line-height: 16px;
+        height: 26px;
+
+    } 
+
+   .breadcrumb-arrow li span, .breadcrumb-arrow li:not(:first-child) span {
+    height: 26px;
+    line-height: 26px;
+
+}
+    
+    .breadcrumb-arrow li span:after, .breadcrumb-arrow li span:before {
+     border-top: 16px solid transparent;
+    border-bottom: 11px solid transparent;
+}
+    .ph{
+            margin: 0 2px;
+
+    }
+    
+   .input{
+            display: block;
+            width: 90%;
+        } 
+    
+    
+    
+    @media(max-width:375px){
+        
+         .breadcrumb-arrow {
+             justify-content: flex-start;
+        width: 75%;
+        line-height: 16px;
+        height: 26px;
+
+    }  
+        
+        .ph{
+                margin: 0 2px;
+
+        }
+        .input{
+            display: block;
+            width: 57%;
+        }
+    }
