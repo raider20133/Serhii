@@ -152,7 +152,7 @@
 
 
 
-	<?php echo do_shortcode('[r_test title="Test work"]Title <br>This is Description[/r_test]'); ?>
+	    <?php echo do_shortcode('[r_test title="Test Work"]This is Description[/r_test]'); ?>
     
     <?php echo add_shortcode('[r_test]This is description[/r_test]'); ?>
 
