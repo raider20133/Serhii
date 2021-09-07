@@ -46,11 +46,16 @@ function add_js_to_page()
 
 
 
-function test_work($atts,$content,$tag){
-   return '<div style="font-size:26px; text-align:center;margin-top:30px;">'. $content .'</div>';
+add_shortcode( 'r_test', 'shortcode_callback' );
 
+function shortcode_callback( $atts,$content ) {
+	$atts = shortcode_atts( array(
+		'title' => 'title',
+	), $atts, 'r_test' );
+
+	return  esc_html($atts['title']).  '<div style="white-space:pre-wrap;">'. $content .'</div>';
 }
-add_shortcode('r_test','test_work');
+
 
 
 
